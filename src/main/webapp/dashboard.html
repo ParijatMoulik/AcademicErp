@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Students - Courses</title>
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/form-validation.css" rel="stylesheet">
+</head>
+<body class = "col-xs-1 text-center">
+<h1>Success!!</h1>
+<main class="container" role="main">
+    <div class="btn-group">
+        <form class="form-check" id="filter-domain">
+
+            <input class="form-control" id="domain_name" placeholder="Enter Domain" required type="text" value="">
+            <button class="btn btn-lg btn-primary btn-block" id="filter-button" type="submit">
+                Filter by Domain
+            </button>
+<!--            <div class="alert alert-warning" id="login-alert_a" role="alert" style="display: none; margin-top: 20px; padding:50px">-->
+<!--                Invalid Domain Name!!-->
+<!--            </div>-->
+        </form>
+        <form class="form-check" id="filter-specialisation">
+            <input class="form-control" id="specialisaton_name" placeholder="Enter Specialisation" required type="text" value="">
+            <button class="btn-lg btn-primary btn-block" id="specialisation-button" type="submit">
+                Filter by Specialisation
+            </button>
+<!--            <div class="alert alert-warning" id="login-alert_b" role="alert" style="display: none; margin-top: 20px; padding:50px">-->
+<!--                Invalid Specialisation Name!!-->
+<!--            </div>-->
+        </form>&nbsp;&nbsp;&nbsp;&nbsp;
+        <button class="btn-lg" id="sort_button" onclick="sort_button()"> Sort by grade </button>
+    </div>
+
+    <div class="p-1" id = "alert-filter">
+        <div class="alert alert-warning" id="login-alert_a" role="alert" style="display: none; margin-top: 20px; padding:50px">
+            Invalid Domain Name!!
+        </div>
+
+        <div class="alert alert-warning" id="login-alert_b" role="alert" style="display: none; margin-top: 20px; padding:50px">
+            Invalid Specialisation Name!!
+        </div>
+    </div>
+
+    <div class="checkbox mb-3" style="margin-bottom: 20px; margin-top: 20px" id="whole_table">
+        <table class="table" >
+            <thead class="thead-dark" id="table_head">
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Student ID</th>
+                <th scope="col">First Name</th>
+                <th scope="col">Last Name</th>
+                <th scope="col">Domain</th>
+                <th scope="col">Specialisation</th>
+                <th scope="col">CGPA</th>
+                <th scope="col">Organisation Name</th>
+                <th scope="col">Minimum Grade</th>
+                <th scope="col">Description</th>
+                <th scope="col">Profile</th>
+                <th scope="col">About the company</th>
+                <th scope="col">CV</th>
+                <th scope="col">Accept/Reject</th>
+            </tr>
+            </thead>
+            <tbody id="table_data">
+            </tbody>
+        </table>
+    </div>
+    <button onclick="submit_button()" id="save">Save</button>
+    <div class="alert alert-warning" id="update_alert" role="alert" style="display: none; margin-top: 20px">
+        Selection saved!!
+    </div>
+</main>
+</body>
+<script src="assets/js/form-validation.js"></script>
+</html>
